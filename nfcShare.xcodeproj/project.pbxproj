@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A437DAF120FCC29D00006B18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A437DAF020FCC29D00006B18 /* AppDelegate.swift */; };
-		A437DAF320FCC29D00006B18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A437DAF220FCC29D00006B18 /* ViewController.swift */; };
+		A437DAF320FCC29D00006B18 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A437DAF220FCC29D00006B18 /* MainViewController.swift */; };
 		A437DAF620FCC29D00006B18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A437DAF420FCC29D00006B18 /* Main.storyboard */; };
 		A437DAF820FCC29E00006B18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A437DAF720FCC29E00006B18 /* Assets.xcassets */; };
 		A437DAFB20FCC29E00006B18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A437DAF920FCC29E00006B18 /* LaunchScreen.storyboard */; };
@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		A437DAED20FCC29D00006B18 /* nfcShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nfcShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A437DAF020FCC29D00006B18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A437DAF220FCC29D00006B18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A437DAF220FCC29D00006B18 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A437DAF520FCC29D00006B18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A437DAF720FCC29E00006B18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A437DAFA20FCC29E00006B18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +47,7 @@
 		A437DB0C20FCC29E00006B18 /* nfcShareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nfcShareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A437DB1020FCC29E00006B18 /* nfcShareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nfcShareUITests.swift; sourceTree = "<group>"; };
 		A437DB1220FCC29E00006B18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4E9DAFB20FCE8A9000F3AA7 /* nfcShare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = nfcShare.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +98,10 @@
 		A437DAEF20FCC29D00006B18 /* nfcShare */ = {
 			isa = PBXGroup;
 			children = (
-				A437DAF020FCC29D00006B18 /* AppDelegate.swift */,
-				A437DAF220FCC29D00006B18 /* ViewController.swift */,
-				A437DAF420FCC29D00006B18 /* Main.storyboard */,
-				A437DAF720FCC29E00006B18 /* Assets.xcassets */,
-				A437DAF920FCC29E00006B18 /* LaunchScreen.storyboard */,
-				A437DAFC20FCC29E00006B18 /* Info.plist */,
+				A4E9DAFB20FCE8A9000F3AA7 /* nfcShare.entitlements */,
+				A4E9DAF920FCE881000F3AA7 /* Flows */,
+				A4E9DAF720FCE81D000F3AA7 /* Support */,
+				A4E9DAF820FCE843000F3AA7 /* Resources */,
 			);
 			path = nfcShare;
 			sourceTree = "<group>";
@@ -123,6 +122,41 @@
 				A437DB1220FCC29E00006B18 /* Info.plist */,
 			);
 			path = nfcShareUITests;
+			sourceTree = "<group>";
+		};
+		A4E9DAF720FCE81D000F3AA7 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				A437DAFC20FCC29E00006B18 /* Info.plist */,
+				A437DAF020FCC29D00006B18 /* AppDelegate.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		A4E9DAF820FCE843000F3AA7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A437DAF720FCC29E00006B18 /* Assets.xcassets */,
+				A437DAF920FCC29E00006B18 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A4E9DAF920FCE881000F3AA7 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				A4E9DAFA20FCE888000F3AA7 /* Main */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		A4E9DAFA20FCE888000F3AA7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A437DAF220FCC29D00006B18 /* MainViewController.swift */,
+				A437DAF420FCC29D00006B18 /* Main.storyboard */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +227,11 @@
 				TargetAttributes = {
 					A437DAEC20FCC29D00006B18 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.NearFieldCommunicationTagReading = {
+								enabled = 1;
+							};
+						};
 					};
 					A437DB0020FCC29E00006B18 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -256,7 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A437DAF320FCC29D00006B18 /* ViewController.swift in Sources */,
+				A437DAF320FCC29D00006B18 /* MainViewController.swift in Sources */,
 				A437DAF120FCC29D00006B18 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,15 +469,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = nfcShare/nfcShare.entitlements;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 62UUS6482X;
-				INFOPLIST_FILE = nfcShare/Info.plist;
+				INFOPLIST_FILE = nfcShare/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.umbrella.nfcShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "371f420a-ee72-44d7-9aa7-26ef2601f2f2";
+				PROVISIONING_PROFILE_SPECIFIER = NFCShare;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -448,15 +490,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = nfcShare/nfcShare.entitlements;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 62UUS6482X;
-				INFOPLIST_FILE = nfcShare/Info.plist;
+				INFOPLIST_FILE = nfcShare/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.umbrella.nfcShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "371f420a-ee72-44d7-9aa7-26ef2601f2f2";
+				PROVISIONING_PROFILE_SPECIFIER = NFCShare;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
